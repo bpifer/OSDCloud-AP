@@ -1,6 +1,7 @@
 #region Initialize
-Write-Host -ForegroundColor DarkGray "Start USW OSDCloud Build"
 Start-Transcript -Path C:\OSDCloud\OSDBuild.log -ErrorAction Ignore
+Write-Host -ForegroundColor DarkGray "Start USW OSDCloud Build"
+Write-Host "System drive = $env:SystemDrive"
 #endregion
 
 #region WinPE
