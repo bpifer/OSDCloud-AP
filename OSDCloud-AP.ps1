@@ -5,7 +5,7 @@ Write-Host "System drive = $env:SystemDrive"
 #endregion
 
 #region WinPE
-if ($env:SystemDrive -eq 'X:\') {
+if ($env:SystemDrive -eq 'X:') {
     osdcloud-StartWinPE -OSDCloud -KeyVault
     #Write-Host -ForegroundColor Cyan "To start a new PowerShell session, type 'start powershell' and press enter"
     Write-Host -ForegroundColor Cyan "Starting OSDCloud install"
@@ -16,7 +16,6 @@ if ($env:SystemDrive -eq 'X:\') {
 #region OOBE
 if ($env:UserName -eq 'defaultuser0') {
     osdcloud-StartOOBE -Display -Language -DateTime -Autopilot -KeyVault
-    $null = Stop-Transcript
 
         $AutopilotRegisterCommand = 'Get-WindowsAutopilotInfo -Online -GroupTag Enterprise -Assign'
         $AutopilotRegisterProcess = osdcloud-AutopilotRegisterCommand -Command $AutopilotRegisterCommand; Start-Sleep -Seconds 30
