@@ -1,7 +1,7 @@
 #region Initialize
 Write-Host -ForegroundColor DarkGray "Start USW OSDCloud Build"
 $Transcript = "$(Get-Date).ToString('yyyy-MM-dd-HHmmss')-OSDCloud.log"
-$null = Start-Transcript -Path (Join-Path $env:SystemRoot\Temp $Transcript) -ErrorAction Ignore
+$null = Start-Transcript -Path (Join-Path $env:SystemRoot\OSDCloud $Transcript) -ErrorAction Ignore
 #endregion
 
 #region WinPE
