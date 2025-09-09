@@ -20,7 +20,9 @@ if ($env:SystemDrive -eq 'X:') {
 
     Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 24H2 -OSEdition Enterprise -OSActivation Volume -ZTI -SkipAutopilot 
     
-    Get-WindowsAutopilotInfo -Online
+    Set-OSDCloudUnattendAuditModeAutopilot 
+
+    Use-WindowsUnattend.autopilotoobehash
 }
 
 #endregion
