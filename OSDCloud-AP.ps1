@@ -18,7 +18,7 @@ if ($env:SystemDrive -eq 'X:') {
     #Write-Host -ForegroundColor Cyan "To start a new PowerShell session, type 'start powershell' and press enter"
     Write-Host -ForegroundColor Cyan "Starting OSDCloud install"
 
-    Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 24H2 -OSEdition Enterprise -OSActivation Volume -ZTI -SkipAutopilot 
+    Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 24H2 -OSEdition Enterprise -OSActivation Volume -ZTI
     
     Set-OSDCloudUnattendAuditModeAutopilot 
 
