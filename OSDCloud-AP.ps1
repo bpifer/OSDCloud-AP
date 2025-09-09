@@ -5,10 +5,10 @@ Write-Host "System drive = $env:SystemDrive"
 
 #Make sure I have the latest OSD Content
 Write-Host  -ForegroundColor Cyan "Updating the awesome OSD PowerShell Module"
-Install-Module OSD -Force
+Install-Module OSD -Force -ErrorAction SilentlyContinue
 
 Write-Host  -ForegroundColor Cyan "Importing the sweet OSD PowerShell Module"
-Import-Module OSD -Force
+Import-Module OSD -Force -ErrorAction SilentlyContinue
 #Start-Sleep -Seconds 5
 
 #endregion
