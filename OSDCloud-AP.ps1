@@ -19,7 +19,6 @@ if ($env:SystemDrive -eq 'X:') {
     Write-Host -ForegroundColor Cyan "Starting OSDCloud install"
 
     Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 24H2 -OSEdition Enterprise -OSActivation Volume -ZTI -Restart
-    
 }
 
 #endregion
